@@ -1,0 +1,149 @@
+.about
+    padding: 130px 0 100px
+    +md-block()
+        padding: 60px 0
+    +sm-block()
+        padding: 40px 0
+    +xs-block()
+        padding: 25px 0 30px
+    &__inner
+        position: relative
+        // .gradien__big
+        //     position: absolute
+        //     // background: conic-gradient(from 180deg at 50% 50%, #EEE631 0deg, #EE31A2 191.02deg, #31E3EE 360deg)
+        //     // filter: blur(340px)
+        //     top: 200px
+        //     right: 100px
+        //     left: 100px
+        //     bottom: 200px
+        //     +sm-block()
+        //         top: 200px
+        //         bottom: 150px
+        //         filter: blur(340px)
+        //     +xs-block()
+        //         right: -50px
+        //         left: -50px
+        //         top: 50px
+        //         bottom: 50px
+    &__title
+        position: relative
+        z-index: 5
+        margin-bottom: 115px
+        +md-block()
+            margin-bottom: 50px
+        +sm-block()
+            margin-bottom: 35px
+        +xs-block()
+            margin-bottom: 25px
+        h2
+            line-height: 120%
+    &__cards
+        +row-flex()
+        row-gap: 55px
+        align-items: stretch
+        +md-block()
+            row-gap: 35px
+        +sm-block()
+            row-gap: 45px
+            justify-content: center
+        +xs-block()
+            row-gap: 35px
+        &--odd
+            +size(5)
+        &--even
+            +size(7)
+
+        &-item
+            +col()
+            +size-sm(6)
+            +size-xs(9)
+            +size-xxs(12)
+            display: flex
+            flex-direction: column
+            position: relative
+            background: $clr-bg-07
+            backdrop-filter: blur(126px)
+            padding: 102px 36px 18px 32px
+            border-radius: 24px
+            background: url('../images/about/card.png') no-repeat center / cover
+            &::before
+                border-radius: 24px
+                content: ""
+                position: absolute
+                top: 0
+                right: 0
+                left: 0
+                bottom: 0
+                background: $clr-bg-07
+            +md-block()
+                padding: 80px 25px 15px 22px
+            +sm-block()
+                padding: 68px 12px 20px !important
+                align-items: center
+                text-align: center
+                border-radius: 18px
+            +xs-block()
+                padding: 50px 12px 20px !important
+                border-radius: 14px
+            +xs-block()
+                border-radius: 10px
+            &:first-child
+                padding-bottom: 102px
+                +md-block()
+                    padding-bottom: 80px
+                .about__card-badge img
+                    +md-block()
+                        width: 115px
+                    +sm-block()
+                        width: 100px
+                    +xs-block()
+                        width: 70px
+
+    &__card
+        &-badge
+            position: relative
+            position: absolute
+            top: 0
+            transform: translateY(-33%)
+            filter: drop-shadow(0px 4px 76px rgba(255, 65, 121, 0.2))
+            +md-block()
+                img
+                    width: 85px
+            +sm-block()
+                img
+                    width: 76px
+            +xs-block()
+                img
+                    width: 60px
+
+        &-title
+            position: relative
+            margin-bottom: 35px
+            +xs-block()
+                margin-bottom: 20px
+            +sm-block()
+                margin-bottom: 10px
+
+            h4
+                +md-block()
+                    font-size: 28px
+                +sm-block()
+                    font-size: 24px
+                +xxs-block()
+                    font-size: 22px
+
+        &-text
+            position: relative
+            +sm-block()
+                margin-top: auto
+            p
+                font-size: 28px
+                font-weight: 500
+                color: $clr-grey
+                line-height: 130%
+                +md-block()
+                    font-size: 20px
+                +sm-block()
+                    font-size: 18px
+                +xxs-block()
+                    font-size: 15px

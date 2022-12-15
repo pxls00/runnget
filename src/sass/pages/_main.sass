@@ -1,0 +1,28 @@
+
+.pg--main
+    padding-top: 128px
+    +md-block()
+        padding-top: 100px
+    +sm-block()
+        padding-top: 90
+    +xs-block()
+        padding-top: 80px
+.haeder--sticky ~ .pg--main
+    padding-top: 80px
+.text
+    font-size: 24px
+    font-weight: 400
+    color: $clr-grey
+    &--center
+        text-align: center    
+.wrapper
+    background: #00000A
+.wrapper__inner
+    background: url('../images/gradients-bg.png') no-repeat center / cover
+
+.gradient-text
+    background: linear-gradient(135deg, #F15A24 0%, #D4145A 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent

@@ -1,0 +1,172 @@
+.lead
+    padding-bottom: 60px
+    +md-block()
+        padding-bottom: 20px
+    +sm-block()
+        padding-bottom: 0
+    &__inner
+        position: relative
+        .gradient__big 
+            position: absolute
+            // background: conic-gradient(from 180deg at 50% 50%, #EEE631 0deg, #EE31A2 191.02deg, #31E3EE 360deg)
+            // filter: blur(400px)
+            top: -200px
+            right: 100px
+            left: 100px
+            bottom: 200px
+            +sm-block()
+                top: -150px
+                bottom: 150px
+                filter: blur(240px)
+            +xs-block()
+                top: -50px
+                right: -100px
+                left: -100px
+                bottom: -50px
+    &__header
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: 34px
+        position: relative
+        z-index: 4
+        +md-block()
+            margin-top: 20px
+        +xs-block()
+            margin-top: 0
+        svg
+            margin: 0 auto
+            +xs-block()
+                width: 45px
+        &-title
+            margin: 10px 0 22px
+            max-width: 725px
+            width: 100%
+            +md-block()
+                margin-bottom: 0
+            +xs-block()
+                margin-top: 0
+            h2
+                line-height: 76.8px
+                +sm-block()
+                    line-height: 55px
+                +xs-block()
+                    line-height: 40px
+        &-text
+            p
+                +xs-block()
+                    font-size: 18px
+    &__actions
+        margin-top: 94px
+        display: flex
+        align-items: stretch
+        justify-content: center
+        gap: 21px
+        position: relative
+        z-index: 4
+        +md-block()
+            margin-top: 40px
+        +sm-block()
+            margin-top: 20px
+
+        a
+            width: 186px
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 9px 0
+            background: rgba(255, 255, 255, 0.24)
+            border: 1px solid rgba(255, 255, 255, 0.06)
+            backdrop-filter: blur(58px)
+            border-radius: 10px
+            transition: all .3s
+            +xs-block()
+                width: 160px
+                padding: 6px 0
+                border-radius: 8px
+                svg
+                    width: 120px
+            +xxs-block()
+                width: 140px
+                padding: 4px 0
+                svg
+                    width: 110px
+            &:hover
+                border-color: rgba(255, 255, 255, 0)
+                background: linear-gradient(234.47deg, #F16206 20.7%, #D61A53 86.36%)
+        a:last-child
+            &:hover
+                background: linear-gradient(-234.47deg, #F16206 20.7%, #D61A53 86.36%)
+
+    &__comment
+        position: absolute
+        max-width: 343px
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $clr-bg-04
+        backdrop-filter: blur(200px)
+        border-radius: 12px
+        padding: 17px 20px 17px 19px
+        z-index: 8
+        +lg-block()
+            width: 280px
+            padding: 12px 15px 12px 14px
+        +xs-block()
+            width: 260px
+            padding: 10px 12px 10px 12px
+        p
+            font-size: 18px
+            font-weight: 400
+            line-height: 25.2px
+            letter-spacing: 1px
+            +lg-block()
+                font-size: 14px
+                letter-spacing: 0.8px
+                line-height: 20px
+            +xs-block()
+                font-size: 12px
+                line-height: 18px
+        &--right
+            top: 176px
+            right: -105px
+            +lg-block()
+                right: -30px
+            +md-block()
+                position: static
+                margin: 20px auto
+        &--left
+            top: 615px
+            transform: rotate(-7deg)
+            left: 286px
+            +md-block()
+                display: none
+
+    &__devices
+        margin-top: -95px
+        position: relative
+        +sm-block()
+            margin-top: -40px
+        +xs-block()
+            display: none
+        &-img
+            z-index: 2
+        &-pointer
+            position: absolute
+            top: 120px
+            right: 26%
+            +md-block()
+                svg
+                    width: 22vw
+            +sm-block()
+                top: 50px
+
+    &__gradient
+        // background: conic-gradient(from 180deg at 50% 50%, #EEE631 0deg, #EE31A2 191.02deg, #31E3EE 360deg)
+        filter: blur(499px)
+        position: absolute
+        top: -300px
+        left: 0
+        right: 0
+        bottom: 300px

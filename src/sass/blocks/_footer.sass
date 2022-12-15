@@ -1,0 +1,99 @@
+.footer
+    position: relative
+    &__inner
+        margin: 40px -125px 0
+        padding: 40px 125px 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        backdrop-filter: blur(126px)
+        background: url('../images/footer/card.png') no-repeat center / cover
+        &::before
+            background-color: $clr-bg-07
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            left: 0
+            box-sizing: content-box
+            bottom: 0
+        +sm-block()
+            padding-top: 40px
+        +xs-block()
+            padding-top: 30px
+        +xs-block()
+            padding-top: 25px
+    &__logo
+        position: relative
+        a
+            svg
+                width: 180px
+    &__menu
+        position: relative
+        display: flex
+        flex-wrap: wrap
+        margin: 21px 0 48px
+        padding: 0
+        list-style: none
+        column-gap: 34px
+        +sm-block()
+            column-gap: 18px
+            margin: 25px 0 40px
+        +xs-block()
+            margin: 18px 0 30px
+        +xxs-block()
+            margin: 10px 0 20px
+            justify-content: space-around
+        li
+            a
+                font-size: 16px
+                font-weight: 400
+                font-family: $font-inter
+                text-decoration: none
+                transition: all .3s
+                +xs-block()
+                    font-size: 15px
+                &:hover
+                    color: darken($clr-white, 20)
+    &__bottom
+        position: relative
+        border-top: 1px solid darken($clr-white, 80)
+        width: 100%
+        padding: 25px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        +xs-block()
+            padding: 20px 0
+        +xxs-block()
+            padding: 15px 0
+            flex-direction: column-reverse
+
+        &-text
+            +xxs-block()
+                margin-top: 10px
+            p
+                font-size: 14px
+                font-weight: 400
+                font-family: $font-inter
+                color: darken($clr-white, 40)
+                +xxs-block()
+                    font-size: 13px
+        &-socials
+            margin: 0
+            padding: 0
+            display: flex
+            list-style: none
+            gap: 20px
+            li
+                a
+                    background: darken($clr-white, 80)
+                    width: 24px
+                    height: 24px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 50%
+                    transition: all .3s
+                    &:hover
+                        background: darken($clr-white, 70)

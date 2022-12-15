@@ -1,0 +1,142 @@
+html,
+body
+	min-width: 320px
+	min-height: 100vh
+
+html
+	overflow: auto
+	scroll-behavior: smooth
+
+body
+	overflow: hidden
+	min-width: 320px
+	line-height: 1.5
+	background-color: #00000A
+
+*,
+*:before,
+*:after
+	box-sizing: border-box
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0)
+
+svg
+	fill: currentColor !important
+	pointer-events: none
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+p
+	margin: 10px 0
+	line-height: 130%
+
+.wrapper
+	display: flex
+	position: relative
+	min-height: 100vh
+	min-width: 320px
+	background: #ffffff
+	overflow: hidden
+
+	&__inner
+		display: flex
+		flex-direction: column
+		width: 100%
+		min-height: 100vh
+
+	&__content
+		flex-grow: 1
+		flex-shrink: 1
+		flex-basis: auto
+
+.overflow-hidden
+	overflow: hidden
+
+.container
+	position: relative
+	max-width: 1250px
+	min-width: 320px
+	padding: 0 30px
+	margin: 0 auto
+	@include lg-block
+		width: 970px
+	@include md-block
+		width: 100%
+		padding: 0 20px
+
+.svgSprite
+	position: absolute
+	left: 0
+	top: 0
+	height: 0
+	width: 0
+	visibility: hidden
+
+a
+	text-decoration: underline
+	color: inherit
+	transition: all 0.2s
+
+	&:hover
+		text-decoration: none
+
+	.svgSymb
+		display: block
+
+
+
+// .modal--popup
+// 	.modal-content
+// 		max-width: 484px
+// 		padding: 59px 50px
+// 		border-radius: 16px
+// 		@include xxs-block
+// 			padding: 40px 20px
+// 	.svgSymb
+// 		color: $clr-dark
+// 	.modal-close
+// 		padding: 6px
+// 		width: 28px
+// 		height: 28px
+// 		border-radius: 50%
+// 		top: 20px
+// 		right: 20px
+// 		background-color: $clr-gray-light
+// 		transition: all 0.2s
+
+// 		&:hover
+// 			background-color: $clr-blue
+// 			transition: all 0.2s
+// 			.svgSymb
+// 				color: $clr-white
+// 				transition: all 0.2s
+// 		.svgSymb
+// 			font-size: 17px
+// 			color: $clr-dark
+// 			transition: all 0.2s
+
+// 	.popup-check
+// 		text-align: center
+// 		margin-bottom: 22px
+// 		@include xs-block
+// 			margin-bottom: 10px
+// 	.modal-title
+// 		text-align: center
+// 		.heading
+// 			font-size: 22px
+// 			line-height: 1.5
+// 			@include xs-block
+// 				font-size: $fz-xxs
+// 	.modal-description
+// 		margin-top: 20px
+// 		@include xs-block
+// 			margin-top: 10px
+// 			font-size: $fz-xs
+
+// .modal-dialog-centered
+// 	height: calc(100% - (.5rem * 2))
+// 	@include xs-block
+// 		height: calc(100% - (1.75rem * 2))

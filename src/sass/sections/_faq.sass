@@ -1,0 +1,290 @@
+.faq
+    padding: 112px 0 60px
+    +md-block()
+        padding: 80px 0 40px
+    +sm-block()
+        padding: 60px 0 30px
+    +xs-block()
+        padding: 40px 0 30px
+    +xxs-block()
+        padding: 30px 0 30px
+    &__inner
+        position: relative
+        .gradient__big
+            position: absolute
+            // background: conic-gradient(from 180deg at 50% 50%, #EEE631 0deg, #EE31A2 191.02deg, #31E3EE 360deg)
+            filter: blur(340px)
+            top: -40%
+            right: 100px
+            left: 100px
+            bottom: 50%
+            z-index: 0
+            +sm-block()
+                top: -20%
+                bottom: 10%
+                filter: blur(300px)
+            +xs-block()
+                right: -50px
+                left: -50px
+                top: 50px
+                bottom: 50px
+                filter: blur(280px)
+
+    h4
+        font-size: 22px
+        font-weight: 700
+    p
+        font-size: 18px
+        font-weight: 400
+        line-height: 1.4
+    &__title
+        position: relative
+        margin-bottom: 92px
+        +sm-block()
+            margin-bottom: 60px
+        +xs-block()
+            margin-bottom: 30px
+        +xxs-block()
+            margin-bottom: 18px
+    &__grid
+        position: relative
+        z-index: 5
+        +row-flex()
+        margin: 0 10px
+        justify-content: space-between
+        +sm-block()
+            margin: 0 -15px
+            flex-direction: column-reverse
+            align-items: center
+    &__accordion
+        +size(7)
+        +size-sm(12)
+        padding-right: 58px
+        display: flex
+        flex-direction: column
+        row-gap: 23px
+        +lg-block()
+            padding-right: 0
+        +sm-block()
+            +col()
+            row-gap: 16px
+        +xs-block()
+            row-gap: 10px
+        &-item
+            padding: 24px 30px 24px 24px
+            background: $clr-bg-07
+            backdrop-filter: blur(126px)
+            border-radius: 24px
+            +sm-block()
+                border-radius: 12px
+                padding: 15px 20px
+            +xs-block()
+                border-radius: 8px
+                padding: 10px 12px
+            +xxs-block()
+                border-radius: 0px
+                padding: 8px 20px
+                margin: 0 -20px
+
+        &-content
+            padding-top: 10px
+            display: none
+            +xs-block()
+                padding-top: 5px
+        &-header
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &-title
+            +sm-block()
+                h4
+                    font-size: 20px
+                    font-weight: 500
+            +xs-block()
+                h4
+                    font-size: 18px
+        &-text
+            +sm-block()
+                p
+                    font-size: 16px
+            +xs-block()
+                p
+                    font-size: 14px
+
+        &-trigger
+            cursor: pointer
+            a
+                display: block
+                width: 18px
+                height: 18px
+                display: flex
+                align-items: center
+                justify-content: center
+                +sm-block()
+                    width: 14px
+                    height: 14px
+                +xs-block()
+                    width: 12px
+                    height: 12px
+            span
+                width: 18px
+                height: 2px
+                background: $clr-white
+                position: relative
+                display: block
+                transition: all .3s
+                +sm-block()
+                    width: 14px
+                +xs-block()
+                    width: 12px
+                    height: 1px
+                &::before
+                    content: ""
+                    position: absolute
+                    right: 0
+                    left: 0
+                    height: 2px
+                    background: $clr-white
+                    transform: rotate(90deg)
+                    +xs-block()
+                        height: 1px
+        &-item.active
+            background: $clr-bg-04
+            .faq__accordion-text p
+                color: darken($clr-white, 20)
+            .faq__accordion-trigger span
+                transform: rotate(45deg)
+                background: darken($clr-white, 40)
+                &::before
+                    background: darken($clr-white, 40)
+        &-text
+            max-width: 490px
+            width: 100%
+            p
+                color: $clr-bg-07
+
+    &__aside
+        
+        width: 484px
+        +size-lg(5)
+        +size-sm(10)
+        +size-xs(12)
+        position: relative
+        border-radius: 24px
+        background: $clr-bg-07
+        backdrop-filter: blur(126px)
+        padding: 53px 72px 42px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        +lg-block()
+            +col()
+            margin: 0 15px
+            padding: 50px 30px 29px
+        +sm-block()
+            padding: 45px 22px 15px
+            margin-bottom: 40px
+            border-radius: 15px
+        +xs-block()
+            padding: 10px 15px 15px
+        +xxs-block()
+            border-radius: 8px
+
+        &-img
+            position: relative
+            img
+                position: relative
+                margin-top: -90px
+                +lg-block()
+                    width: 220px
+                +sm-block()
+                    width: 120px
+                    margin-top: -100px
+                +xs-block()
+                    width: 90px
+                    margin-top: -30px
+                +xxs-block()
+                    width: 80px
+
+            &::before
+                content: ""
+                height: 146px
+                border-radius: 50%
+                position: absolute
+                top: 0
+                right: 0
+                left: 0
+                background: white
+                // background: radial-gradient(62.33% 62.33% at 50% 50%, rgba(213, 21, 91, 0.441) 0%, rgba(213, 21, 91, 0) 100%)
+                filter: blur(118px)
+                +xs-block()
+                    filter: blur(100px)
+                +xxs-block()
+                    height: 100px
+                    filter: blur(70px)
+        &-title
+            margin: 42px 0 16px
+            +lg-block()
+                margin: 32px 0 16px
+            +sm-block()
+                margin: 10px 0 15px
+                h4
+                    font-size: 28px
+                    line-height: 1.2
+            +xs-block()
+                margin: 5px 0 10px
+                h4
+                    font-size: 24px
+            +xxs-block()
+                margin: 5px 0 10px
+                h4
+                    font-size: 22px
+
+        &-text
+            margin-bottom: 54px
+            +xxs-block()
+                margin-bottom: 15px
+            p
+                +sm-block()
+                    font-size: 16px
+                +xs-block()
+                    color: darken($clr-white, 20)
+                +xxs-block()
+                    font-size: 14px
+        &-action
+            width: 100%
+            +lg-block()
+                margin-top: auto
+            a
+                width: 100%
+                height: 48px
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 8px
+                font-size: 18px
+                font-weight: 500
+                background: linear-gradient(234.47deg, #F16206 20.7%, #D61A53 86.36%)
+                border-radius: 12px
+                text-decoration: none
+                +sm-block()
+                    width: 70%
+                    margin: 0 auto
+                    height: 40px
+                    border-radius: 10px
+                    font-size: 16px
+                +xs-block()
+                    max-width: 200px
+                    width: 100%
+                    font-size: 14px
+                    border-radius: 6px
+                    height: 34px
+                    gap: 4px
+                    svg
+                        width: 18px
+                +xxs-block()
+                    font-size: 12px
+                    svg
+                        width: 15px

@@ -1,0 +1,10 @@
+//=include ./vendor/jquery.mobile.custom.js
+//=include ./vendor/utils.js
+//=include ./vendor/bootstrap/util.js
+//=include ./vendor/bootstrap/button.js
+//=include ./vendor/bootstrap/modal.js
+//=include ./vendor/swiper.js
+//=include ./vendor/select2.full.js
+//=include ./vendor/jquery.mask.js
+//=include ./vendor/autosize.js
+//=include ./vendor/mklb.js

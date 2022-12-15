@@ -1,0 +1,252 @@
+form
+	position: relative
+
+.input,
+.textarea
+	font-family: $font-sfpro
+	font-size: $fz-xs
+	line-height: 1.5
+	font-weight: 500
+	border: 1px solid transparent
+	margin: 0
+	padding: 14px 0 25px
+	-webkit-appearance: none
+	-moz-appearance: none
+	height: 35px
+	background: transparent
+	transition: border-color 0.2s, box-shadow 0.2s, color 0.2s
+	color: $clr-dark
+	border-radius: 0
+	@media screen and (min-width: 0\0) and (min-resolution: +72dpi)
+		padding: 0
+
+	@include placeholder
+		font-family: $font-sfpro
+		font-weight: 500
+		opacity: 1
+		color: $clr-gray
+		font-size: $fz-xs
+
+	&:focus
+		outline: none
+		@include  placeholder
+			color: $clr-gray
+
+.textarea
+	height: auto
+	resize: vertical
+	display: block
+	padding: 0
+
+.field
+	position: relative
+
+	> label
+		font-size: 14px
+		display: block
+		font-weight: 500
+		color: $clr-gray
+		margin: 0 0 6px 0
+		padding: 0
+
+	.input,
+	.textarea
+		width: 100%
+
+	&.filled
+		.input,
+		.textarea
+			border-bottom-color: darken(#E0E4E8, 25)
+
+			&:focus
+				border-bottom-color: darken(#E0E4E8, 25)
+
+
+	.help-block
+		display: none
+		font-size: 14px
+		margin: 2px 0 -10px
+		padding: 4px
+		white-space: nowrap
+		//&:before
+			display: block
+			position: absolute
+			left: -8px
+			top: calc(50% - 4px)
+			content: ""
+			width: 0
+			height: 0
+			border-top: 4px solid transparent
+			border-right: 8px solid $clr-red
+			border-bottom: 4px solid transparent
+
+	&.has-error
+		.input,
+		.textarea,
+		.select2-container .select2-selection
+			border-bottom-color: $clr-red
+
+		.help-block
+			display: block
+			color: $clr-red
+
+		.field-icon
+			color: $clr-red
+
+	&.has-success
+		.input,
+		.textarea
+			@include placeholder
+				color: #333333
+
+.form
+	&-field
+		margin: 0 0 11px 0
+
+	&-message
+		background: #e6f2f5
+		text-align: center
+		height: 50px
+		line-height: 50px
+		border-radius: 4px
+		position: absolute
+		top: calc(100% + 10px)
+		width: 100%
+		display: none
+		z-index: 1
+		@include xs-block
+			height: auto
+			line-height: 1.5
+			padding: 13px 20px
+
+		&--error
+			color: $clr-red
+			background: rgba($clr-red, 0.1)
+
+// checkbox
+.checkbox
+	position: relative
+	margin: -9px 0
+	@include sm-block
+		margin: 5px 0
+	label
+		display: inline-block
+		vertical-align: top
+		padding: 0 0 0 33px
+		cursor: pointer
+		position: relative
+		font-size: $fz-xxs
+		font-weight: 500
+		color: $clr-dark
+		user-select: none
+		&:hover,
+		&:focus
+			span
+				border-color: $clr-blue
+	input[type=checkbox]
+		display: none
+		&:checked
+			& + span
+				border-color: $clr-blue
+				&:before
+					opacity: 1
+	span
+		position: absolute
+		top: 1px
+		left: 0
+		display: block
+		width: 20px
+		height: 20px
+		border: 1px solid $clr-light-border
+		border-radius: 3px
+		transition: 0.1s
+		background: transparent
+		overflow: hidden
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			background: $clr-blue url('../images/svg/check-mark-white.svg') center center no-repeat
+			background-size: 10px 8px
+			border-color: $clr-blue
+			position: absolute
+			left: 0
+			top: 0
+			opacity: 0
+			transition: opacity 0.2s
+
+.checkbox-group
+	margin: 0 0 33px
+	@include xs-block
+		margin-bottom: 20px
+
+// select2
+.select2-container
+
+	.select2-selection--single
+		border-radius: 0
+
+	.select2-selection
+		border: 0
+		border-bottom: 1px solid #E0E4E8
+		height: 42px
+		-webkit-appearance: none
+		-moz-appearance: none
+
+		&:focus
+			outline: none
+
+		.select2-selection__rendered
+			padding: 0
+			line-height: 30px
+			font-size: $fz-xs
+			font-weight: 500
+
+		.select2-selection__placeholder
+			color: $clr-gray
+			font-size: $fz-xs
+			font-weight: 500
+			font-family: $font-sfpro
+
+		.select2-selection__arrow
+			background: url('../images/svg/arrow-down.svg') no-repeat
+			height: 12px
+			width: 12px
+			top: 13px
+			right: 0
+			transition: transform 0.33s
+			b
+				display: none
+
+	.select2-results
+		.select2-results__options
+			max-height: none
+			height: auto
+		.select2-results__option
+			font-size: $fz-xs
+			font-weight: 400
+			font-family: $font-sfpro
+			color: #555C69
+			padding: 10px
+			transition: all 0.12s
+			@include xxs-block
+				font-size: $fz-xxs
+			&:not(:last-child)
+				border-bottom: 1px solid #E0E4E8
+
+		.select2-results__option--highlighted
+			color: $clr-white
+			transition: all 0.12s
+
+	.select2-dropdown
+		border-top: 0
+		border: 1px solid #E0E4E8
+		max-height: none
+		height: auto
+		margin: 0
+
+.select2-container--open
+	.select2-selection__arrow
+		transform: rotate(180deg)
+		transition: transform 0.33s

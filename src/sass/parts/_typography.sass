@@ -1,0 +1,94 @@
+html,
+body
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	font-family: $font-sfpro
+	font-size: 21px
+	line-height: 1.5
+	font-weight: 500
+	color: $clr-white
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	color: $clr-white
+	line-height: 1.5
+	font-weight: 700
+	margin: 1.5em 0 0.5em 0
+	@include first-last-margin
+
+h1
+	font-size: 48px
+
+h2
+	font-size: 30px
+
+h3
+	font-size: 24px
+
+h4
+	font-size: 21px
+
+h5
+	font-size: 18px
+
+h6
+	font-size: 16px
+
+p
+	margin: 1.5em 0
+	@include first-last-margin
+	@include md-block
+		letter-spacing: 0.02em
+
+
+ul,
+ol
+	margin: 1.5em 0
+	padding: 0 0 0 20px
+	@include first-last-margin
+
+.heading
+	font-family: $font-sfpro
+	font-weight: 600
+	font-size: $h-md
+	color: $clr-white
+	line-height: 1.3
+	padding: 0
+	margin: 0
+	@include sm-block
+		font-size: 26px 
+	@include xxs-block()
+		font-size: 22px
+
+	&--lg
+		font-size: $h-lg
+		line-height: 1.2
+		font-weight: 700
+		@include lg-block
+			font-size: 55px
+		@include md-block
+			font-weight: 600
+			font-size: 48px
+		@include xs-block
+			font-size: 34px
+		@include xxs-block
+			font-size: 28px
+
+	&--md
+		font-size: $fz-md
+		@include lg-block
+			font-size: 28px
+		@include sm-block
+			font-size: $fz-md
+		@include xxs-block
+			font-size: $fz-sm
+
+	&--sm
+		font-size: $fz-sm
+		font-weight: 600
+	&--center
+		text-align: center

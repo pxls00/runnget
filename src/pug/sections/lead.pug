@@ -1,0 +1,28 @@
+section.lead
+    .container 
+        .lead__inner 
+            .gradient__big 
+            .lead__header
+                +icon('sprite_header-mark')
+                .lead__header-title
+                    h2.heading.heading--lg.heading--center Run with your friends and get 
+                        span.gradient-text Merch
+                .lead__header-text   
+                    p.text.text--center Sounds interesting, doesn't it?
+            .lead__actions 
+                a(href="#downloadappfromappmarket")
+                    +icon('sprite_b-appmarket')
+                a(href="#downloadappfromappstore")
+                    +icon('sprite_b-appstore')
+            .lead__comment.lead__comment--right 
+                p Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.
+            .lead__comment.lead__comment--left 
+                p Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet.
+            .lead__devices 
+                .lead__devices-img 
+                    picture 
+                        source(srcset="/images/lead/devices.webp, /images/lead/devices@2x.webp 1.5x")
+                        img(src="/images/lead/devices.jpg", srcset="/images/lead/devices@2x.jpg 1.5x" alt="devices image" width="1190" height="669")
+                .lead__devices-pointer 
+                    +icon('sprite_lead-pointer')
+                    

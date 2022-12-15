@@ -1,0 +1,14 @@
+svg
+	fill: currentColor !important
+
+.svgSymb
+	display: inline-block
+	height: 1em
+	width: 1em
+{{#shapes}}
+	{{#selector.dimensions}}{{expression}}{{^last}},
+	{{/last}}{{/selector.dimensions}}
+	
+		font-size: {{height.outer}}px
+		width: calc({{width.outer}}/{{height.outer}})+em
+{{/shapes}}

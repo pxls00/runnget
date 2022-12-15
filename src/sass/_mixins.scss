@@ -1,0 +1,123 @@
+@mixin text-truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin placeholder {
+	&::placeholder {
+		@content
+	}
+	&::-webkit-input-placeholder {
+		@content
+	}
+	&:-moz-placeholder {
+		@content
+	}
+	&::-moz-placeholder {
+		@content
+	}
+	&:-ms-input-placeholder {
+		@content
+	}
+}
+
+@mixin button-state-color($color, $font-color: $button-font-color, $percent: 5%) {
+	color: $font-color;
+	border-color: $color;
+	background-color: $color;
+	&:hover,
+	&:focus {
+		border-color: darken($color, $percent);
+		background-color: darken($color, $percent);
+	}
+	&:active {
+		border-color: lighten($color, $percent);
+		background-color: lighten($color, $percent);
+	}
+	&.btn--bordered {
+		color: $color;
+		background-color: transparent;
+
+		&:hover,
+		&:focus {
+			color: $font-color;
+			background-color: darken($color, $percent);
+		}
+
+		&:active {
+			color: $font-color;
+			background-color: lighten($color, $percent);
+		}
+	}
+}
+
+@mixin first-last-margin() {
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+@mixin portfolioColors($p-bg, $p-content, $p-link) {
+	background: $p-bg;
+	@include sm-block {
+		background: $p-content;
+	}
+	.portfolio {
+		&__info {
+			background-color: $p-content;
+			position: relative;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: -100vw;
+				width: 100vw;
+				height: 100%;
+				background-color: $p-content;
+				@include sm-block {
+					display: none;
+				}
+			}
+		}
+		&__explore {
+			color: $p-link;
+
+			&:hover {
+				color: lighten($p-link, 10);
+			}
+		}
+		&__actions {
+			span {
+				color: $p-link;
+			}
+		}
+	}
+}
+
+@mixin retina($density: 1.5) {
+	@media only screen and (-webkit-min-device-pixel-ratio: $density),
+	only screen and (min--moz-device-pixel-ratio: $density),
+	only screen and (-o-min-device-pixel-ratio: #{$density}/1),
+	only screen and (min-device-pixel-ratio: $density),
+	only screen and (min-resolution: 192dpi),
+	only screen and (min-resolution: $density dppx) {
+	  @content;
+	}
+  }

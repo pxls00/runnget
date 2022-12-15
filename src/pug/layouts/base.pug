@@ -1,0 +1,50 @@
+//- Icon
+mixin icon(name)
+    svg(class="svgSymb svgSymb-" + name)
+        use(xlink:href="#" + name)
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+        link(href='/css/main.css' rel='stylesheet')
+        //- link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+        //- link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+        //- link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+        //- link(rel="manifest" href="/site.webmanifest")
+        //- link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+        //- meta(name="msapplication-TileColor" content="#da532c")
+        //- meta(name="theme-color" content="#ffffff")
+        //- meta(name="google-site-verification" content="bGklCE_Ok9lPdbZJuZKe8FYlGcC_IKU9u1kG9FzOGWo")
+        block meta
+
+        block title
+            title
+
+
+
+    body
+        block svg
+            script.
+                var svgArray = [
+                    '/svgmin/sprite_icons.svg'
+                ];
+            div.svgSprite
+        block wrapper_class
+            - var wrapper_classes = 'pg--main';
+        .wrapper
+            .wrapper__inner
+                block header
+                .wrapper__content(class=wrapper_classes)
+                    block content
+
+                block footer
+
+        block mobile-menu
+            include ../blocks/mobile-menu
+        block modals
+        script(src='/js/jquery-2.2.4.js', type='text/javascript')
+        script(src='/js/vendor.js', type='text/javascript')
+        script(src='/js/scripts.js', type='text/javascript')
+        block scripts

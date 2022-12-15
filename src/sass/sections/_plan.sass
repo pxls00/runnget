@@ -1,0 +1,111 @@
+.plan
+    &__inner
+        padding: 34px 0 68px
+        position: relative
+        z-index: 4
+        +row-flex()
+        +sm-block()
+            display: flex
+            flex-direction: column-reverse
+            align-items: center
+            padding: 34px 0 40px
+        +xs-block()
+            padding-bottom: 30px
+        +xxs-block()
+            padding-bottom: 20px
+
+    &__block
+        +col()
+        &--right
+            +size(7)
+            +size-sm(10)
+            +size-xs(12)
+            padding: 90px 56px 50px 7px
+            +lg-block()
+                padding: 95px 0 50px 0
+            +md-block()
+                padding: 0
+                display: flex
+                flex-direction: column
+                justify-content: center
+            +sm-block()
+                align-items: center
+                text-align: center
+                margin-bottom: 40px
+            +xs-block()
+                margin-bottom: 30px
+            +xxs-block()
+                margin-bottom: 20px
+
+            div:last-child
+                p
+                    max-width: 605px
+                    width: 100%
+        &--left
+            +size(5)
+            +size-xs(7)
+            position: relative
+            +md-block()
+                display: flex
+                align-items: center
+    &__img
+        position: absolute
+        &--device
+            top: 0
+            left: 0
+            transform: matrix(0.97, 0.26, -0.26, 0.97, 0, 0) translate(-27%)
+            transform-origin: left
+            filter: drop-shadow(7.2093px 10.814px 21.6279px rgba(41, 41, 42, 0.5))
+            +lg-block()
+                transform: matrix(0.97, 0.26, -0.26, 0.97, 0, 0) translate(-16%)
+            +md-block()
+                position: static
+                transform: rotate(0) translate(0)
+            +sm-block()
+                margin: 0 auto
+        &--watch
+            bottom: 0
+            right: 0
+            transform: matrix(0.97, -0.23, 0.23, 0.97, 0, 0) translate(-20%)
+            filter: drop-shadow(0px 4px 76px rgba(255, 65, 121, 0.2))
+            +lg-block()
+                bottom: -30px
+                transform: matrix(0.97, -0.23, 0.23, 0.97, 0, 0) translate(2%)
+            +md-block()
+                bottom: -35px
+                right: -15px
+                transform: matrix(0.97, -0.23, 0.23, 0.97, 0, 0)
+                img
+                    width: 200px
+            +sm-block()
+                display: none
+    &__title
+        margin-bottom: 24px
+        +md-block()
+            margin-bottom: 10px
+        +xs-block()
+            margin-bottom: 5px
+    &__title-secondary
+        margin-top: 40px
+        padding-top: 48px
+        margin-bottom: 16px
+        border-top: 1px solid #202036
+        +md-block()
+            margin: 25px 0 5px
+            padding-top: 15px
+        +xs-block()
+            margin: 15px 0 5px
+            padding-top: 10px
+        h3
+            max-width: 525px
+            width: 100%
+    &__text
+        p
+            +md-block()
+                font-size: 20px
+            +sm-block()
+                font-size: 18px
+            +xs-block()
+                font-size: 16px
+            +xxs-block()
+                font-size: 15px

@@ -1,0 +1,98 @@
+.header
+    padding-top: 60px
+    padding-bottom: 20px
+    transition: all .2s
+    z-index: 5
+    position: fixed
+    width: 100%
+    +lg-block()
+        padding-top: 50px
+    +md-block()
+        padding-top: 40px
+    +sm-block()
+        padding-top: 30px
+    +xs-block()
+        padding-top: 25px
+    +xs-block()
+        padding-top: 20px
+    &--sticky
+        padding: 20px 0
+        +sm-block()
+            padding: 15px 0
+        +xs-block()
+            padding: 10px 0
+        box-shadow: 1px 1px 1px 1px darken($clr-white, 80)
+        background: #00000A 
+        z-index: 999
+    &__inner
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__menu
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        flex: 1 1 50%
+        gap: 38px
+        +md-block()
+            gap: 18px
+        +sm-block()
+            display: none
+        &-item
+            a
+                font-size: 20px
+                font-weight: 400
+                text-decoration: none
+
+                +lg-block()
+                    font-size: 18px
+                +md-block()
+                    font-size: 15px
+                &:hover
+                    color: darken($clr-white, 20)
+    &__action
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        flex: 1 1 50%
+        gap: 18px
+        +md-block()
+            gap: 5px
+        &-link
+            font-size: 20px
+            font-weight: 400
+            text-decoration: none
+            padding: 9px 19px
+            border-radius: 12px
+            +lg-block()
+                font-size: 16px
+                padding: 6px 15px
+                border-radius: 10px
+            +sm-block()
+                font-size: 15px
+                padding: 6px 16px
+                border-radius: 10px
+            +xs-block()
+                display: none
+            &--bg
+                background: linear-gradient(135deg, #F15A24 0%, #D4145A 100%)
+                -webkit-text-fill-color: $clr-white
+    &__logo
+        display: flex
+        flex: 1 1 auto
+        a
+            svg
+                +md-block()
+                    width: 220px
+                +sm-block()
+                    width: 260px
+                +xs-block()
+                    width: 240px
+                +xxs-block()
+                    width: 190px
+    .burger
+        margin-left: 10px
+        display: none
+        +sm-block()
+            display: block

@@ -1,0 +1,19 @@
+section.request#request
+    .container 
+        .request__inner 
+            .request__left
+                .request__left-img
+                    picture 
+                        source(srcset="/images/request/subscribe.webp, /images/request/subscribe@2x.webp 1.5x")
+                        img(src="/images/request/subscribe.jpg", srcset="/images/request/subscribe@2x.jpg 1.5x" alt="subscribe image" width="477" height="336")
+            .request__right
+                .request__right-title 
+                    h2.heading.heading--lg Subscribe Newsletter
+                .request__right-text 
+                    p.text Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                .request__right-pointer
+                    +icon('sprite_request-pointer')
+                .request__right-form 
+                    form
+                        input(type="text" placeholder="Your e-mail")
+                        button(type="submit") Subscribe
